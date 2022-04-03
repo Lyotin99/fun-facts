@@ -7,7 +7,7 @@ The general setup looks like:
 
 ![general setup](setup.png)
 
-If the image have the following names (img-client, img-storage, and img-generator), then the correct commands to run the application in test mode would be:
+If the images have the following names (***img-client***, ***img-storage***, and ***img-generator***), then the correct commands to run the application in ***test mode*** would be:
 
 ```bash
 # Run the client component
