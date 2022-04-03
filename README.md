@@ -7,7 +7,21 @@ The general setup looks like:
 
 ![general setup](setup.png)
 
-If all is set up corectly then the result will be something like this:
+If the image have the following names (img-client, img-storage, and img-generator), then the correct commands to run the application in test mode would be:
+
+```bash
+# Run the client component
+docker container run -d --name con-client --net fun-facts -p 8080:5000 img-client
+
+# Run the storage component
+docker container run -d --name con-storage --net fun-facts -e MYSQL_ROOT_PASSWORD='ExamPa$$w0rd' img-storage
+
+# Run the generator component
+docker container run -d --name con-generator --net fun-facts img-generator
+
+```
+
+If all is set up corectly then the result would be something like this:
 
 ![sample result](result.png)
 
