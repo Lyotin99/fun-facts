@@ -1,3 +1,4 @@
+import os
 import mysql.connector
 import random
 
@@ -13,10 +14,10 @@ print("New fun fact discovered: " + s)
 
 try:
   mydb = mysql.connector.connect(
-    host="con-storage",
-    user="root",
-    password="ExamPa$$w0rd",
-    database="animal_facts"
+    host = os.getenv('DB_HOST', "con-storage"),
+    user = os.getenv('DB_USER', "root"),
+    password = os.getenv('DB_PASS', "ExamPa$$w0rd"),
+    database = os.getenv('DB_NAME', "animal_facts")
   )
   cursor = mydb.cursor()
   cursor.execute("INSERT INTO facts (fact) VALUES ('" + s + "')")
