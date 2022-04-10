@@ -1,3 +1,4 @@
+import os
 import mysql.connector
 from flask import Flask
 
@@ -10,22 +11,33 @@ def index():
 
   facts = ""
 
-  mydb = mysql.connector.connect(
-    host="con-storage",
-    user="root",
-    password="ExamPa$$w0rd",
-    database="animal_facts"
-  )
-  cursor = mydb.cursor()
+  db_host = os.getenv('DB_HOST', 'con-storage')
+  db_user = os.getenv('DB_USER', 'root')
+  db_pass = os.getenv('DB_PASS', 'ExamPa$$w0rd')
+  db_name = os.getenv('DB_NAME', 'animal_facts')
 
-  cursor.execute("SELECT CONCAT('<li>', fact, '</li>') html_fact FROM facts ORDER BY id DESC LIMIT 10")
+  try:
+    mydb = mysql.connector.connect(
+      host = db_host,
+      user = db_user,
+      password = db_pass,
+      database = db_name
+    )
+    cursor = mydb.cursor()
+  
+    cursor.execute("SELECT CONCAT('<li>', fact, '</li>') html_fact FROM facts ORDER BY id DESC LIMIT 10")
+  
+    records = cursor.fetchall()
+ 
+    if cursor.rowcount == 0:
+      facts = 'No data found yet.'
 
-  records = cursor.fetchall()
-
-  for row in records:
-    facts = facts + row[0]
-
-  cursor.close()
+    for row in records:
+      facts = facts + row[0]
+  
+    cursor.close()
+  except:
+    facts = "Error: Something happened while trying to talk to the database."
 
   result = template.replace("{FACTS}", facts)
 
