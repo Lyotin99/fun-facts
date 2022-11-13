@@ -8,6 +8,8 @@ WORKDIR /app
 
 RUN pip3 install -r requirements.txt
 
-RUN chmod +x entrypoint.sh random-fun-fact.sh
+#RUN chmod +x entrypoint.sh random-fun-fact.sh
 
-ENTRYPOINT /app/entrypoint.sh
+#ENTRYPOINT /app/entrypoint.sh
+
+CMD [ "python3", "-u", "/app/app.py"]
