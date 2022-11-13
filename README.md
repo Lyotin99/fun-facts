@@ -35,7 +35,7 @@ For successful completion of the challenge, you will have to create a pipeline t
 
 Please note that:
  - each container should be named after the following rule - ***con-role***, where ***role*** is either ***client***, ***storage***, or ***generator***. For example, ***con-client***;
- - database password is expected to be **ExamPa$$w0rd**. It can be changed via environment variables (DB_PASS for the client and generator and MYSQL_ROOT_PASSWORD for the storage);
+ - database password is expected to be **ExamPa$$w0rd**. It can be changed via environment variables (***DB_PASS*** for the ***client*** and ***generator*** and ***MYSQL_ROOT_PASSWORD*** for the ***storage***);
  - web content is delivered by the **client** on port **5000**. It may be redirected to an arbitrary port on the host, for example on port 80 or port 8080;
  - there is no particular order to follow when starting the containers.
 
