@@ -1,5 +1,8 @@
 # Fun Facts
-A simple project to be used for the final practice exam for the [**DevOps - Containerization, CI/CD & Monitoring (2022.02)**](https://softuni.bg/trainings/3670/devops-containerization-ci-cd-monitoring-february-2022) and [**DevOps - Containerization, CI/CD & Monitoring (2022.09)**](https://softuni.bg/trainings/3888/devops-containerization-ci-cd-monitoring-september-2022) courses at **SoftUni**. 
+A simple project used for the final practice exam for the following courses at **SoftUni**:
+ - [**DevOps - Containerization, CI/CD & Monitoring (2022.02)**](https://softuni.bg/trainings/3670/devops-containerization-ci-cd-monitoring-february-2022)
+ - [**DevOps - Containerization, CI/CD & Monitoring (2022.09)**](https://softuni.bg/trainings/3888/devops-containerization-ci-cd-monitoring-september-2022) 
+ - [**DevOps - Containerization, CI/CD & Monitoring (2023.01)**](https://softuni.bg/trainings/4036/devops-containerization-ci-cd-monitoring-january-2023)
 
 It is a set of three Docker containers, each with a dedicated role. Together they form a simple web application. 
 
@@ -39,4 +42,4 @@ Please note that:
  - web content is delivered by the **client** on port **5000**. It may be redirected to an arbitrary port on the host, for example on port 80 or port 8080;
  - there is no particular order to follow when starting the containers.
 
-*More specific details could be found in the downloadable **Practice Exam** document available in the **Regular Exam** section of the course.*
+*More specific details could be found in the downloadable **Practice Exam** document available in the **Regular Exam** section of the respective course.*
