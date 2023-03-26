@@ -1,4 +1,4 @@
-# Fun Facts
+# Fun Facts test
 A simple project used for the final practice exam for the following courses at **SoftUni**:
  - [**DevOps - Containerization, CI/CD & Monitoring (2022.02)**](https://softuni.bg/trainings/3670/devops-containerization-ci-cd-monitoring-february-2022)
  - [**DevOps - Containerization, CI/CD & Monitoring (2022.09)**](https://softuni.bg/trainings/3888/devops-containerization-ci-cd-monitoring-september-2022) 
@@ -33,6 +33,8 @@ For successful completion of the challenge, you will have to create a pipeline t
  - run the containers in ***test mode*** (client published on port 8080)
  - test that the client is accessible;
  - publish the images to a registry (for example, Docker Hub);
+
+test
  - run the application from the published images in ***production mode*** (client published on port 80);
  - ensure the containers are part of the same network.
 
